@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
+    <string name="boyunu_kilonuzu_giriniz">Boyunuzu ve kilonuzu giriniz.</string>
+    <string name="hatali_deger_girdiniz">Hatalı değer girdiniz!</string>
+    <string name="zayifsiniz">Zayıfsınız</string>
+    <string name="kilonuz_normal">Kilonuz normal</string>
+    <string name="kilonuz_normalin_ustunde">Kilonuz normalin üstünde</string>
+    <string name="obezsiniz">Obezsiniz</string>
+    <string name="gecerli_boy_kilo">Lütfen geçerli bir boy ve kilo değeri girin.</string>
+    <string name="boy_sifir_olamaz">Boy değeri sıfır olamaz.</string>
 </resources>
