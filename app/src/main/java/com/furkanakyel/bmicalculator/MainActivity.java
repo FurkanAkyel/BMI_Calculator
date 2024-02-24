@@ -21,11 +21,20 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String boyStr = editTextHeight.getText().toString();
+                String kiloStr = editTextWeight.getText().toString();
+
+                if (boyStr.isEmpty() || kiloStr.isEmpty()) {
+                    textIndex.setText("Boyunuzu ve kilonuzu giriniz.");
+                    return;
+                }
                 float boy = Float.parseFloat(String.valueOf(editTextHeight.getText())) / 100;
                 float kilo = Float.parseFloat(String.valueOf(editTextWeight.getText()));
                 float bmi = kilo / (boy * boy);
                 textView.setText(String.valueOf(bmi));
-                if(bmi < 18.5) {
+                if(bmi == 0 || boy == 0){
+                    textIndex.setText("Hatalı değer girdiniz!");
+                }else if(bmi < 18.5) {
                     textIndex.setText("Zayıfsınız");
                 }else if (bmi < 25) {
                     textIndex.setText("Kilonuz normal");
@@ -33,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     textIndex.setText("Kilonuz normalin üstünde");
                 }else {
                     textIndex.setText("Obezsiniz");
+                    }
                 }
-            }
         });
     }
 }
