@@ -7,54 +7,58 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/hesapla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/calculate_button"
+        android:layout_width="91dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="35dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="?android:attr/colorPrimary"
-        android:text="Hesapla"
+        android:text="@string/calculate"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/sonuc"
+        app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kilo" />
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
 
     <EditText
-        android:id="@+id/boy"
+        android:id="@+id/height"
         android:layout_width="215dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="27dp"
+        android:autofillHints=""
         android:background="@drawable/roundstyle"
         android:backgroundTint="?android:attr/colorPrimary"
-        android:gravity="center"
         android:ems="10"
-        android:hint="Boy giriniz(cm)"
+        android:gravity="center"
+        android:hint="@string/enter_height_cm"
         android:inputType="number"
         android:textColor="@color/white"
         android:textColorHint="@color/whitesmoke"
-        app:layout_constraintBottom_toTopOf="@+id/kilo"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/kilo"
+        android:id="@+id/weight"
         android:layout_width="215dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="33dp"
+        android:autofillHints=""
         android:background="@drawable/roundstyle"
         android:backgroundTint="?android:attr/colorPrimary"
         android:ems="10"
         android:gravity="center"
-        android:hint="Kilo giriniz(kg)"
+        android:hint="@string/enter_weight_kg"
         android:inputType="number"
         android:textColor="@color/white"
         android:textColorHint="@color/whitesmoke"
-        app:layout_constraintBottom_toTopOf="@+id/hesapla"
+        app:layout_constraintBottom_toTopOf="@+id/calculate_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boy" />
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/name"
@@ -62,10 +66,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="97dp"
-        android:text="VKİ Hesaplayıcı"
+        android:text="@string/bmi_calculator"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/boy"
+        app:layout_constraintBottom_toTopOf="@+id/height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -81,21 +85,21 @@
         app:layout_constraintBottom_toTopOf="@+id/creator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sonuc" />
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <TextView
         android:id="@+id/creator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
-        android:text="Created by Furkan Akyel"
+        android:text="@string/created_by"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/index" />
 
     <TextView
-        android:id="@+id/sonuc"
+        android:id="@+id/result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
@@ -105,6 +109,6 @@
         app:layout_constraintBottom_toTopOf="@+id/index"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hesapla" />
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

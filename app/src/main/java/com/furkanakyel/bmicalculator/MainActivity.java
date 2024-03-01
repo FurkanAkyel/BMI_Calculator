@@ -13,46 +13,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText editTextHeight = findViewById(R.id.boy);
-        EditText editTextWeight = findViewById(R.id.kilo);
-        Button button = findViewById(R.id.hesapla);
-        TextView textView = findViewById(R.id.sonuc);
+        EditText editTextHeight = findViewById(R.id.height);
+        EditText editTextWeight = findViewById(R.id.weight);
+        Button button = findViewById(R.id.calculate_button);
+        TextView textView = findViewById(R.id.result);
         TextView textIndex = findViewById(R.id.index);
 
         button.setOnClickListener(view -> {
-            String boyStr = editTextHeight.getText().toString();
-            String kiloStr = editTextWeight.getText().toString();
+            String heightStr = editTextHeight.getText().toString();
+            String weightStr = editTextWeight.getText().toString();
 
-            if (boyStr.isEmpty() || kiloStr.isEmpty()) {
-                textIndex.setText(R.string.boyunu_kilonuzu_giriniz);
+            if (heightStr.isEmpty() || weightStr.isEmpty()) {
+                textIndex.setText(R.string.enter_height_weight);
                 return;
             }
 
             try {
-                float boy = Float.parseFloat(boyStr) / 100;
-                float kilo = Float.parseFloat(kiloStr);
+                float height = Float.parseFloat(heightStr) / 100;
+                float weight = Float.parseFloat(weightStr);
 
-                if (boy == 0) {
-                    textIndex.setText(R.string.boy_sifir_olamaz);
+                if (height == 0) {
+                    textIndex.setText(R.string.height_cannot_be_zero);
                     return;
                 }
 
-                float bmi = kilo / (boy * boy);
+                float bmi = weight / (height * height);
                 textView.setText(String.valueOf(bmi));
 
                 if (bmi == 0) {
-                    textIndex.setText(R.string.hatali_deger_girdiniz);
+                    textIndex.setText(R.string.invalid_value);
                 } else if (bmi < 18.5) {
-                    textIndex.setText(R.string.zayifsiniz);
+                    textIndex.setText(R.string.underweight);
                 } else if (bmi < 25) {
-                    textIndex.setText(R.string.kilonuz_normal);
+                    textIndex.setText(R.string.normal_weight);
                 } else if (bmi < 30) {
-                    textIndex.setText(R.string.kilonuz_normalin_ustunde);
+                    textIndex.setText(R.string.weight_above_normal);
                 } else {
-                    textIndex.setText(R.string.obezsiniz);
+                    textIndex.setText(R.string.you_are_obese);
                 }
             } catch (NumberFormatException e) {
-                textIndex.setText(R.string.gecerli_boy_kilo);
+                textIndex.setText(R.string.enter_valid_height_weight);
             }
         });
     }

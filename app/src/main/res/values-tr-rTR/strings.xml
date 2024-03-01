@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VKİ Hesaplayıcı</string>
+    <string name="enter_height_weight">Boyunuzu ve kilonuzu giriniz.</string>
+    <string name="invalid_value">Hatalı değer girdiniz!</string>
+    <string name="normal_weight">Kilonuz normal</string>
+    <string name="weight_above_normal">Kilonuz normalin üstünde</string>
+    <string name="you_are_obese">Obezsiniz</string>
+    <string name="enter_valid_height_weight">Lütfen geçerli bir boy ve kilo değeri girin.</string>
+    <string name="height_cannot_be_zero">Boy değeri sıfır olamaz.</string>
+    <string name="enter_height_cm">Boy giriniz(cm)</string>
+    <string name="created_by">Furkan Akyel tarafından geliştirilmiştir.</string>
+    <string name="bmi_calculator">VKİ Hesaplayıcı</string>
+    <string name="calculate">Hesapla</string>
+    <string name="enter_weight_kg">Kilo giriniz(kg)</string>
+    <string name="underweight">Zayıfsınız</string>
+</resources>
